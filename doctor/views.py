@@ -4,4 +4,4 @@ from .models import doctors
 
 
 def index(request):
-    pass 
+    pass
