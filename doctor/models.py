@@ -51,7 +51,7 @@ class doctor (models.Model):
     class Meta:
         db_table = 'doctor'
         verbose_name = 'دکتر ها'
-        verbose_name_plural = 'doctors'
+        verbose_name_plural = 'دکتر ها'
 
 
 class reserve (models.Model):
@@ -66,7 +66,7 @@ class reserve (models.Model):
     class Meta:
         db_table = 'reserve'
         verbose_name = 'رزرو ها'
-        verbose_name_plural = 'reserves'
+        verbose_name_plural = 'رزرو ها'
 
 
 
