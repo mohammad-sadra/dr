@@ -1,12 +1,12 @@
 from django.db import models
 from multiselectfield import MultiSelectField
 
-MY_CHOICES = (('sh', 'شنبه'),
-              ('1sh', 'یک شنبه'),
-              ('2sh', 'دوشنبه'),
-              ('3sh', 'سه شنبه'),
-              ('4sh', 'چهارشنبه'),
-              ('5sh', 'پنچ شنبه')
+MY_CHOICES = (('0', 'شنبه'),
+              ('1', 'یک شنبه'),
+              ('2', 'دوشنبه'),
+              ('3', 'سه شنبه'),
+              ('4', 'چهارشنبه'),
+              ('5', 'پنچ شنبه')
               )
 MY_CHOICES_time = (
            ('14:00', '14:00'),
@@ -65,6 +65,7 @@ class reserve (models.Model):
     reserve_time = MultiSelectField('ساعت رزرو', choices=MY_CHOICES_time, max_choices=1)
     price = models.BigIntegerField('مبلغ پرداختی')
     pay = MultiSelectField('نوع پرداخت', choices=type_pay, max_choices=1, default=1)
+    info = models.TextField('توضیحات', blank=True)
 
     class Meta:
         db_table = 'reserve'

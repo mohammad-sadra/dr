@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'doctor',
     'multiselectfield',
+    'rest_framework',
 
 ]
 
