@@ -1,0 +1,5 @@
+# djqango
+
+Django==3.2
+django-multiselectfield==0.1.12
+djangorestframework==3.13.1
