@@ -11,18 +11,17 @@ MY_CHOICES = (('sh', 'شنبه'),
 
 
 class doctors (models.Model):
-    name = models.CharField(max_length=150)
-    type = models.CharField(max_length=200)
-    day = MultiSelectField(choices=MY_CHOICES, max_choices=3)
+    name = models.CharField('نام و نام خانوادگی', max_length=150)
+    type = models.CharField('تخصص',max_length=200)
+    day = MultiSelectField('روز های کاری', choices=MY_CHOICES, max_choices=3)
 
     class meta:
         db_table = 'doctors'
-        varbose_name = \
-            'دکتر ها'
+        varbose_name = 'دکتر ها'
 
 
 class reserve (models.Model):
     name = models.CharField(max_length=100)
-    phone = models.BigIntegerField(max_length=11)
+    phone = models.BigIntegerField()
 
 
