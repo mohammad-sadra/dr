@@ -2,3 +2,4 @@ venv/
 .idea/
 db.sqlite3
 /doctor/migrations
+/doctor/local_setting.py
