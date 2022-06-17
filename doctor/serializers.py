@@ -23,4 +23,4 @@ class doctorget(serializers.ModelSerializer):
 class reserveget(serializers.ModelSerializer):
     class Meta:
         model = reserve
-        fields = ('name', 'phone', 'price', 'pay', 'info')
+        fields = ('name', 'phone', 'price', 'pay', 'info', 'reserve_time')
