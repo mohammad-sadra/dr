@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from doctor.views import getdata
+from doctor.views import get_doctor, get_reserve_1, get_reserve_2, addreserve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/form/add', getdata.as_view())
+    path('api/form/add/', get_doctor),
+    path('api/form/table/1', get_reserve_1),
+    path('api/form/table/2', get_reserve_2),
+    path('api/form/add/reserve/', addreserve),
+
 ]

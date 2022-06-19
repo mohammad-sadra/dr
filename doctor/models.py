@@ -61,7 +61,7 @@ class reserve (models.Model):
     name = models.CharField('نام بیمار', max_length=100)
     phone = models.BigIntegerField('شماره تلفن بیمار')
     doctor_reserve = models.ForeignKey('doctor',verbose_name='دکتر بیمار' ,on_delete=models.CASCADE)
-    reserve_date = models.DateField('تاریخ رزرو', auto_now=True)
+    reserve_date = models.DateField('تاریخ رزرو')
     reserve_time = MultiSelectField('ساعت رزرو', choices=MY_CHOICES_time, max_choices=1)
     price = models.BigIntegerField('مبلغ پرداختی')
     pay = MultiSelectField('نوع پرداخت', choices=type_pay, max_choices=1, default=1)

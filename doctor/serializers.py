@@ -11,10 +11,11 @@ class doctoradd(serializers.ModelSerializer):
 class reserveadd(serializers.ModelSerializer):
     class Meta:
         model = reserve
-        fields = ('reserve_date', 'reserve_time')
+        fields = ('name')
+        #, 'phone', 'doctor_reserve', 'reserve_time', 'reserve_date', 'price', 'pay', 'info'
 
 
-class doctorget(serializers.ModelSerializer):
+class doctor_check(serializers.ModelSerializer):
     class Meta:
         model = doctor
         fields = ('name')

@@ -11,4 +11,4 @@ class doctor(admin.ModelAdmin):
 @admin.register(reserve)
 class reserve(admin.ModelAdmin):
     list_display = ['name', 'phone', 'doctor_reserve']
-    search_fields = ['name']
+    search_fields = ['name', 'phone']
