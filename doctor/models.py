@@ -44,6 +44,7 @@ type_pay = (
 
 
 class doctor (models.Model):
+    id = models.BigAutoField(primary_key=True)
     name = models.CharField('نام و نام خانوادگی', max_length=150)
     type = models.CharField('تخصص',max_length=200)
     day = MultiSelectField('روز های کاری', choices=MY_CHOICES, max_choices=3)
@@ -54,13 +55,13 @@ class doctor (models.Model):
         verbose_name_plural = 'دکتر ها'
 
     def __str__(self):
-        return self.name
+        return self.id
 
 
 class reserve (models.Model):
     name = models.CharField('نام بیمار', max_length=100)
     phone = models.BigIntegerField('شماره تلفن بیمار')
-    doctor_reserve = models.ForeignKey('doctor',verbose_name='دکتر بیمار' ,on_delete=models.CASCADE)
+    doctor_reserve = models.IntegerField('دکتر بیمار')
     reserve_date = models.DateField('تاریخ رزرو')
     reserve_time = MultiSelectField('ساعت رزرو', choices=MY_CHOICES_time, max_choices=1)
     price = models.BigIntegerField('مبلغ پرداختی')

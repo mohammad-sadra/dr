@@ -23,5 +23,4 @@ urlpatterns = [
     path('api/form/table/1', get_reserve_1),
     path('api/form/table/2', get_reserve_2),
     path('api/form/add/reserve/', addreserve),
-
 ]
